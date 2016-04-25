@@ -1,0 +1,14 @@
+{
+    "$schema": "https://raw.githubusercontent.com/Azure/azure-devtestlab/master/schemas/2015-01-01/dtlArtifacts.json",
+    "title": "CreateDir",
+    "description": "Creates an empty directory in the root partition",
+    "tags": [
+        "Windows",
+        "CreateDir"
+    ],
+    "iconUri": "https://github.com/Azure/azure-devtestlab/blob/master/Artifacts/windows-run-powershell/powershell.png",
+    "targetOsType": "Windows",
+    "runCommand": {
+        "commandToExecute": "powershell.exe -ExecutionPolicy bypass -File createdir.ps1"
+    }
+}
