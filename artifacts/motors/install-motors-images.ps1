@@ -31,6 +31,6 @@ msiexec /i "$folder/urlrewrite.msi" /qn
 
 Invoke-WebRequest -Uri "https://download.microsoft.com/download/F/9/4/F942F07D-F26F-4F30-B4E3-EBD54FABA377/NDP462-KB3151800-x86-x64-AllOS-ENU.exe" -OutFile "$folder\dotnet46.exe"
 
-"$folder\dotnet46.exe" /q /serialdownload /log "$folder\dotnet46.log"
+Start-Process -FilePath "$folder\dotnet46.exe /q /serialdownload /log $folder\dotnet46.log"
 
 # REBOOT VIA .NET INSTALLATION
