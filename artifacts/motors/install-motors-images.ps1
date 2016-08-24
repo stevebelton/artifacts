@@ -10,7 +10,7 @@ $folder = "$env:temp\$guid"
 
 New-Item -Path $folder -ItemType Directory
 
-$zipfilelocal = "$folder\imageserver"
+$zipfilelocal = "$folder"
 $zipextracted = "$folder\extracted"
 
 # INSTALL THE WEBSITE
@@ -20,7 +20,7 @@ Invoke-WebRequest "C:\Packages\Plugins\Microsoft.Compute.CustomScriptExtension\1
 Add-Type -assembly "system.io.compression.filesystem"
 [io.compression.zipfile]::ExtractToDirectory($zipfilelocal, $zipextracted)
 
-copy-item $zipextracted\imageserver\* c:\inetpub\wwwroot -Force -Recurse
+copy-item $zipextracted\* c:\inetpub\wwwroot -Force -Recurse
 
 # INSTALL URLREWRITE
 
