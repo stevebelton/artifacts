@@ -10,7 +10,7 @@ $folder = "$env:temp\$guid"
 
 New-Item -Path $folder -ItemType Directory
 
-$zipfilelocal = "$folder"
+$zipfilelocal = "$folder\imageserver.zip"
 $zipextracted = "$folder\extracted"
 
 # INSTALL THE WEBSITE
